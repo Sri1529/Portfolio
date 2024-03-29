@@ -1,3 +1,4 @@
+
 {
   "name": "portfolio",
   "private": true,
@@ -39,5 +40,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "vite": {
+    "build": {
+      "outDir": "build" 
+    }
   }
 }
