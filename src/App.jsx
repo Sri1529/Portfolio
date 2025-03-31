@@ -14,7 +14,7 @@ function App() {
   const [scrolling, setScrolling] = useState(false);
 
   const onPageScroll = () => {
-    if(window.pageYOffset > 200) {
+    if (window.pageYOffset > 200) {
       setScrolling(true)
     } else {
       setScrolling(false);
@@ -23,7 +23,7 @@ function App() {
 
   useEffect(() => {
     window.addEventListener("scroll", onPageScroll)
-    return() => {
+    return () => {
       window.removeEventListener("scroll", onPageScroll)
     }
   }, [])
@@ -69,18 +69,18 @@ function App() {
               </div>
               <div>
                 <p className="mt-4 text-gray-400">
-                Passionate Full Stack Developer with OOPs
- proficiency, excelling in freelancing to deliver
- precise web solutions. Committed to enhancing
- project efficiency and success by leveraging the
- distinctive Agile Methodology
+                  Passionate Full Stack Developer with strong proficiency
+                  in OOP principles, specializing in building scalable and
+                  efficient web solutions. Adept at leveraging Agile
+                  methodologies to drive project success and deliver
+                  high-quality applications
                 </p>
-                <button 
-  className="px-8 shadow-gray-500 shadow-md py-5 mt-5 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700"
-  onClick={() => window.open('https://drive.google.com/uc?export=download&id=1wW7bFuaFoQ3N6wxNljcxZFib2sLgizba')}
->
-  Download Resume
-</button>
+                <button
+                  className="px-8 shadow-gray-500 shadow-md py-5 mt-5 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700"
+                  onClick={() => window.open('https://drive.google.com/file/d/1u82807ddoFA3PSSP86pgdFPDeBNpnfUg/view?usp=sharing')}
+                >
+                  Download Resume
+                </button>
 
               </div>
             </div>
@@ -93,70 +93,115 @@ function App() {
         </section>
         {/* Projects section */}
         <section id="projects">
-  <div className="container m-auto px-4 sm:py-12">
-    <h2 className="text-2xl font-semibold">Projects</h2>
-    <div className="flex flex-col sm:flex-row gap-10 mt-11">
-      <div className="border border-gray-500 rounded-md p-5 flex-1">
-        <img src={Project1} className="w-full h-auto" />
-        <h3 className="text-2xl font-semibold mt-8">
-          Grocery Task Management landing page
-        </h3>
-        <p className="text-gray-400 text-sm mt-2">
-        Responsive landing page built with React.js for front-end developers. React.js, CSS (SCSS)
-        </p>
-        <div className="flex mt-12 gap-2">
-          {/* <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
+          <div className="container m-auto px-4 sm:py-12">
+            <h2 className="text-2xl font-semibold">Projects</h2>
+            <div className="flex flex-col sm:flex-row gap-10 mt-11">
+              <div className="border border-gray-500 rounded-md p-5 flex-1">
+                <img src={Project1} className="w-full h-auto" />
+                <h3 className="text-2xl font-semibold mt-8">
+                  Grocery Task Management landing page
+                </h3>
+                <p className="text-gray-400 text-sm mt-2">
+                  Responsive landing page built with React.js for front-end developers. React.js, CSS (SCSS)
+                </p>
+                <div className="flex mt-12 gap-2">
+                  {/* <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
             Live preview
           </button> */}
-          <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500"
-          onClick={() => window.open('https://github.com/Sri1529/Grocery_React.git')}
-          >
-            Checkout github
-          </button>
-        </div>
-      </div>
-      <div className="border border-gray-500 rounded-md p-5 flex-1">
-        <img src={Project2} className="w-full h-auto" />
-        <h3 className="text-2xl font-semibold mt-8">
-          URL shortner 
-           landing page
-        </h3>
-        <p className="text-gray-400 text-sm mt-2">
-        Responsive landing page built with React.js for front-end developers. React.js, CSS (SCSS)
-        </p>
-        <div className="flex gap-2 mt-12">
-          {/* <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
+                  <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500"
+                    onClick={() => window.open('https://github.com/Sri1529/Grocery_React.git')}
+                  >
+                    Checkout github
+                  </button>
+                </div>
+              </div>
+              <div className="border border-gray-500 rounded-md p-5 flex-1">
+                <img src={Project2} className="w-full h-auto" />
+                <h3 className="text-2xl font-semibold mt-8">
+                  URL shortner
+                  landing page
+                </h3>
+                <p className="text-gray-400 text-sm mt-2">
+                  Responsive landing page built with React.js for front-end developers. React.js, CSS (SCSS)
+                </p>
+                <div className="flex gap-2 mt-12">
+                  {/* <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
             Live preview
           </button> */}
-          <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500"
-          onClick={() => window.open('https://github.com/Sri1529/URL_Project.git')}
-          >
-            Checkout github
-          </button>
-        </div>
-      </div>
-      <div className="border border-gray-500 rounded-md p-5 flex-1">
-        <img src={Project3} className="w-full h-auto" />
-        <h3 className="text-2xl font-semibold mt-8">
-          Landing page for BookMark saver
-        </h3>
-        <p className="text-gray-400 text-sm mt-2">
-        Responsive landing page built with React.js for front-end developers. React.js, CSS (SCSS)
-        </p>
-        <div className="flex gap-4 mt-12">
-          {/* <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
+                  <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500"
+                    onClick={() => window.open('https://github.com/Sri1529/URL_Project.git')}
+                  >
+                    Checkout github
+                  </button>
+                </div>
+              </div>
+              <div className="border border-gray-500 rounded-md p-5 flex-1">
+                <img src={Project3} className="w-full h-auto" />
+                <h3 className="text-2xl font-semibold mt-8">
+                  Landing page for BookMark saver
+                </h3>
+                <p className="text-gray-400 text-sm mt-2">
+                  Responsive landing page built with React.js for front-end developers. React.js, CSS (SCSS)
+                </p>
+                <div className="flex gap-4 mt-12">
+                  {/* <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
             Live preview
           </button> */}
-          <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500"
-           onClick={() => window.open('https://github.com/Sri1529/Bookmark_Project.git')}
-          >
-            Checkout github
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+                  <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500"
+                    onClick={() => window.open('https://github.com/Sri1529/Bookmark_Project.git')}
+                  >
+                    Checkout github
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Experience section */}
+        <section className="py-10" id="experience">
+          <div className="container m-auto px-4">
+            <h2 className="text-2xl font-semibold">Experience</h2>
+            <div className="mt-12 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white">
+
+              {/* AGENCI FLOW Experience */}
+              <div className="pl-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
+                {/* s<h3 className="absolute left-0 text-lg font-semibold">June 2024 - Present</h3> */}
+                
+                <h3 className="text-xl font-semibold">Agenci Flow, Coimbatore  ⎯  AUG 2024</h3>
+                <p className="text-gray-200 text-md">Full Stack Developer</p>
+                
+                <ul className="mt-4 text-gray-400 list-disc ml-6">
+                  <li>Enhanced an agency management platform for handling invoices, payments, and client interactions.</li>
+                  <li>Implemented real-time communication using WebSockets (Socket.io) for instant messaging.</li>
+                  <li>Integrated and managed Stripe APIs for payments, cancellations, refunds, and automated billing.</li>
+                  <li>Implemented Multi-Factor Authentication (MFA) for improved security.</li>
+                  <li>Developed a dual-database architecture:
+                    <ul className="list-disc ml-6">
+                      <li>PostgreSQL + Prisma + TypeScript for core transactional operations.</li>
+                      <li>MySQL + Prisma + TypeScript for additional data management.</li>
+                    </ul>
+                  </li>
+                  <li>Integrated SendGrid for automated email workflows.</li>
+                  <li>Developed front-end using React.js and Material-UI (MUI).</li>
+                  <li>Built and optimized backend services:
+                    <ul className="list-disc ml-6">
+                      <li>Node.js + MySQL backend for smooth API performance.</li>
+                      <li>Node.js + TypeScript + Prisma + PostgreSQL backend for efficient database interactions.</li>
+                    </ul>
+                  </li>
+                  <li>Implemented API error handling and logging for improved debugging and system stability.</li>
+                  <li>Used RabbitMQ (Docker container) for queue-based email sending.</li>
+                  <li>Developed SendGrid and AWS SES webhooks to track email statuses.</li>
+                  <li>Configured AWS SES for email sending and domain verification.</li>
+                  <li>Implemented a Git pre-commit hook to prevent unintended modifications of Prisma migration files.</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
 
         {/* Technoglies section */}
         <section className="py-10" id="technologies">
@@ -210,6 +255,20 @@ function App() {
               <div className="mt-8">
                 <div className="flex justify-between items-center">
                   <h2 className="font-semibold">PostgresSQL</h2>
+                  <p className="text-gray-500">Advanced</p>
+                </div>
+                <span className="w-[45%] h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
+              </div>
+              <div className="mt-8">
+                <div className="flex justify-between items-center">
+                  <h2 className="font-semibold">Prisma</h2>
+                  <p className="text-gray-500">Advanced</p>
+                </div>
+                <span className="w-[45%] h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
+              </div>
+              <div className="mt-8">
+                <div className="flex justify-between items-center">
+                  <h2 className="font-semibold">MUI</h2>
                   <p className="text-gray-500">Advanced</p>
                 </div>
                 <span className="w-[45%] h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
@@ -278,25 +337,25 @@ function App() {
               <div className="pl-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
                 <h3 className="absolute left-0 text-lg font-semibold">2017</h3>
                 <p>
-                I completed my 10th standard at Rasi International School under the CBSE board with a CGPA of 9.2.
+                  I completed my 10th standard at Rasi International School under the CBSE board with a CGPA of 9.2.
                 </p>
               </div>
               <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
                 <h3 className="absolute left-0 text-lg font-semibold">2019</h3>
                 <p>
-                I completed my 12th standard at Rasi International School under the CBSE board, achieving a score of 64%.
+                  I completed my 12th standard at Rasi International School under the CBSE board, achieving a score of 64%.
                 </p>
               </div>
               <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
                 <h3 className="absolute left-0 text-lg font-semibold">2023</h3>
                 <p>
-                I pursued my Bachelor's degree in Computer Science and Engineering under Anna University, achieving a CGPA of 8.45.
+                  I pursued my Bachelor's degree in Computer Science and Engineering under Anna University, achieving a CGPA of 8.45.
                 </p>
               </div>
               <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
                 <h3 className="absolute left-0 text-lg font-semibold">2024</h3>
                 <p>
-                I undertook a Full Stack Development course at IMARTICUS Learning, where I completed various projects driven by my interest in development.
+                  I joined Flozy as a Junior Web Developer, where I worked on developing and optimizing scalable web applications. My role involved integrating front-end and back-end technologies, improving system architecture, and ensuring high-performance solutions. During my time at Flozy, I gained hands-on experience in building efficient workflows and enhancing user experiences.
                 </p>
               </div>
             </div>
@@ -332,7 +391,7 @@ function App() {
       {
         scrolling && (
           <button className="fixed block right-8 bottom-0 w-24" onClick={() => {
-            window.scrollTo(0,0);
+            window.scrollTo(0, 0);
           }}>
             <img src={ArrowDown} />
           </button>
